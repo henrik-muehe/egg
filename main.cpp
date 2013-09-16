@@ -263,7 +263,7 @@ int main(int argc, char** argv) {
 		
 	} else {
 		int64_t maxPos=ps.maxRead();
-		int64_t startPos; for (startPos=maxPos-1;startPos>0&&ps[startPos]!='\n';--startPos); ++startPos;
+		int64_t startPos; for (startPos=maxPos-1;startPos>0&&ps[startPos]!='\n';--startPos); startPos+=ps[startPos]=='\n';
 		int64_t endPos; for (endPos=maxPos;ps[endPos]!='\n'&&ps[endPos]!='\0';++endPos);
 		int64_t lineCount=1;
 		try {
