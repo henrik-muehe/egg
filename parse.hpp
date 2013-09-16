@@ -188,6 +188,9 @@ namespace parse {
 
 			// Forget stored input
 			str.erase(str.begin(), str.begin()+ii);
+			
+			// Adjust offset
+			str_off = i;
 		}
 
 		/** Retrieves the maximum position inside the input that we have
